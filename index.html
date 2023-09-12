@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <!--the basic arthimetic operations-->
+            <button onclick="clearDisplay()">CL</button>
+            <button onclick="deleteLastChar()">DEL</button>
+            <button onclick="percentageDisplay('%')">%</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('00')">00</button>
+            <button onclick="calculateFactorial('Factorial')">&excl;</button>
+            <button onclick="calculateTrig('sin')">sin</button>
+            <button onclick="calculateTrig('cos')">cos</button>
+            <button onclick="calculateTrig('tan')">tan</button>
+            <button onclick="calculateExp('exp')">x <sup>2</sup></button>
+            <button onclick="calculatePow('pow')">x <sup>n</sup></button>
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+            <button onclick="calculatePi('&#8508(')">&#8508</button>
+            <button onclick="calculateSqrt()">√</button>
+            <button onclick="calculateLog ('log')">log</button>
+            <button onclick="calculateLn ('ln')">ln</button>
+            <button style="background-color: brown;" onclick="calculate()">=</button>
+        </div>
+    </input>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
