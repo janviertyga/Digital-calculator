@@ -30,22 +30,21 @@ function percentageDisplay() {
             }
         }
 
-    function calculateTrig(value) {
-        var display = document.getElementById('display')
-        display.value += value;
-    }
-
-        function calculate() {
-            var display = document.getElementById('display');
+        function calculateTrig(func) {
             try {
-                var expression = display.value;
-                expression = expression.replace(/sin\(/g, 'Math.sin(Math.PI)(');
-                expression = expression.replace(/cos\(/g, 'Math.cos(Math.PI)(');
-                expression = expression.replace(/tan\(/g, 'Math.tan(Math.PI)(');
-                expression = expression.replace(/asin\(/g, 'Math.asin(');
-                expression = expression.replace(/acos\(/g, 'Math.acos(');
-                
-                display.value = eval(expression);
+                const angle = eval(display.value);
+                const radians = angle * (Math.PI / 180); // Convert degrees to radians
+                switch (func) {
+                    case 'sin':
+                        display.value = Math.sin(radians);
+                        break;
+                    case 'cos':
+                        display.value = Math.cos(radians);
+                        break;
+                    case 'tan':
+                        display.value = Math.tan(radians);
+                        break;
+                }
             } catch (error) {
                 display.value = 'Error';
             }
@@ -69,20 +68,12 @@ function percentageDisplay() {
                 display.value = 'Error';
             }
         }
-      function calculateFactorial() {
-         var display = getElementById('display')
-         var currentValue = parseFloat(current.Value)
-         if (!isNaN(currentValue)) {
-            display.value = (n == 0 || n == 1).toString();
-        }
+        function calacuateFactorial() {
+            var display = document.getElementById
             
-         else if(n > 1){
-            for(var i = n; i >= 1; i--){
-                answer =  answer * i;
-            }
+        const factorial = (n) => (n <= 1 ? 1 : n * factorial(n - 1));
 
-            } 
-         }
+        }
          function calculateLn(value) {
             var display = document.getElementById('display')
             display.value += value;
@@ -92,7 +83,7 @@ function percentageDisplay() {
                 var display = document.getElementById('display');
                 try {
                     var Number = display.value;
-                    Number = Number.replace(/ln\(/g, 'Math.log(');
+                    Number = Number.replace('Math.log(');
                     display.value = eval(Number);
                 } catch (error) {
                     display.value = 'Error';
